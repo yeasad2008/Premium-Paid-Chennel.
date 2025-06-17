@@ -206,6 +206,13 @@
           } else {
             button.textContent = "Incomplete";
             showPopup();
+
+            // ২ সেকেন্ড পর আবার আগের টেক্সটে রিসেট করো যাতে ইউজার আবার ক্লিক করতে পারে
+            setTimeout(() => {
+              button.textContent = taskId + " Task";
+            }, 2000);
+
+            // এখানে সাইট থেকে বের করার কোনো কোড নেই, তাই সাইট থেকে বের হবে না
           }
         }
       }, 500);

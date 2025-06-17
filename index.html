@@ -100,24 +100,81 @@
     .native-ad {
       margin-bottom: 20px;
     }
+
+    /* Popup Style */
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-box {
+      background: white;
+      padding: 20px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .popup-box p {
+      color: #000;
+      font-size: 17px;
+      text-align: center;
+    }
+
+    .popup-box p span {
+      color: red;
+      font-weight: bold;
+    }
+
+    .popup-box p strong {
+      color: #0066cc;
+    }
+
+    .popup-btn {
+      margin-top: 15px;
+      background: #0088cc;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
   </style>
 </head>
 <body>
   <div class="container">
     <div class="top-banner">Premium Paid Channel</div>
 
-    <button class="subscribe-btn" onclick="window.location.href='https://example.com/subscribe'">সাবস্ক্রিপশন কিনুন</button>
+    <button class="subscribe-btn" onclick="window.location.href='https://t.me/Jonsyash'">সাবস্ক্রিপশন কিনুন</button>
 
     <div class="logo"></div>
 
     <div class="notice">
-      ৮টি টাস্ক সম্পন্ন করুন → প্রতিটি টাস্কে ক্লিক করার পর ৫ সেকেন্ড অপেক্ষা করুন → আগে ফিরে এলে টাস্ক হবে না → সব হলে "Join Now" ক্লিক করুন।
+      ৮টি টাস্ক সম্পন্ন করুন → প্রতিটি টাস্কে ক্লিক করার পর ৫ সেকেন্ড অপে<script type="text/javascript">
+	atOptions = {
+		'key' : '7132ac6dbb3cdc71db98dda1eb48c773',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/7132ac6dbb3cdc71db98dda1eb48c773/invoke.js"></script>ক্ষা করুন → আগে ফিরে এলে টাস্ক হবে না → সব হলে "Join Now" ক্লিক করুন।
     </div>
 
-    <button class="task" onclick="startTask(this, 1)">1 Task</button>
-    <button class="task" onclick="startTask(this, 2)">2 Task</button>
-    <button class="task" onclick="startTask(this, 3)">3 Task</button>
-    <button class="task" onclick="startTask(this, 4)">4 Task</button>
+    <button class="https://www.profitableratecpm.com/f3iihfyy8w?key=37e469801307d1f4d65058da5b6ba8c3" onclick="startTask(this, 1)">1 Task</button>
+    <button class="https://www.profitableratecpm.com/bwyebg8wa?key=f27a49ff98efb51684addd7eef1f20d0" onclick="startTask(this, 2)">2 Task</button>
+    <button class="https://otieu.com/4/9388402" onclick="startTask(this, 3)">3 Task</button>
+    <button class="https://otieu.com/4/9460128" onclick="startTask(this, 4)">4 Task</button>
 
     <button id="continueBtn" disabled onclick="window.location.href='https://t.me/premiumPaidChennel'">Join Now</button>
 
@@ -133,6 +190,14 @@
         };
       </script>
       <script type="text/javascript" src="//www.highperformanceformat.com/7132ac6dbb3cdc71db98dda1eb48c773/invoke.js"></script>
+    </div>
+  </div>
+
+  <!-- Popup HTML -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <p><span>আপনি ৫ সেকেন্ডের আগে ফিরে এসেছেন,</span><br> তাই টাস্ক কমপ্লিট হয়নি।<br><strong>দয়া করে আবার ক্লিক করে ৫ সেকেন্ড অপেক্ষা করুন এবং টাস্ক সম্পন্ন করুন।</strong></p>
+      <button class="popup-btn" onclick="closePopup()">ঠিক আছে</button>
     </div>
   </div>
 
@@ -162,11 +227,19 @@
               continueBtn.classList.add("active");
             }
           } else {
-            alert("আপনি ৫ সেকেন্ডের আগে ফিরে এসেছেন, তাই টাস্ক কমপ্লিট হয়নি।\nদয়া করে আবার ক্লিক করে ৫ সেকেন্ড অপেক্ষা করুন এবং টাস্ক সম্পন্ন করুন।");
             button.textContent = "Incomplete";
+            showPopup();
           }
         }
       }, 500);
+    }
+
+    function showPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
     }
   </script>
 </body>

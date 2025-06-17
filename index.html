@@ -1,128 +1,104 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium paid Channel</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Paid Channel</title>
   <style>
-    html, body {
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
-      display: flex;
-      justify-content: center;
+      text-align: center;
     }
 
     .container {
       max-width: 480px;
-      width: 100%;
-      text-align: center;
-      box-sizing: border-box;
+      margin: auto;
+      padding: 10px;
     }
 
     .top-banner {
       background-color: #000;
       color: #fff;
-      font-weight: bold;
       font-size: 18px;
       padding: 12px;
+      font-weight: bold;
+    }
+
+    .subscribe-btn {
+      background-color: red;
+      color: white;
+      padding: 6px 14px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 12px;
+      cursor: pointer;
     }
 
     .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+      width: 100px;
+      height: 100px;
       margin: 10px auto;
-      background: url('logo.png') no-repeat center/cover;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg') no-repeat center/cover;
+      border-radius: 50%;
       border: 3px solid #00695c;
     }
 
-    .bio {
-      font-size: 16px;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-    .warning-text {
-      color: red;
-      font-size: 15px;
-      padding: 10px;
-      margin-bottom: 15px;
+    .notice {
+      background: #e0f7fa;
+      color: #006064;
+      border: 1px solid #004d40;
+      border-radius: 8px;
+      padding: 8px;
+      margin: 10px 15px;
+      font-size: 14px;
+      line-height: 1.5em;
     }
 
     .task {
-      margin: 10px auto;
+      background-color: #64b5f6;
+      color: white;
       padding: 15px 20px;
+      margin: 10px auto;
       border: none;
       border-radius: 8px;
       font-size: 18px;
       width: 80%;
       max-width: 300px;
-      display: block;
-      transition: background-color 0.3s;
-      color: white;
       cursor: pointer;
-    }
-
-    .task.incomplete {
-      background-color: #64b5f6;
-    }
-
-    .task.inProgress {
-      background-color: #ff9800;
     }
 
     .task.complete {
       background-color: #4CAF50;
     }
 
-    .task:hover:not(.complete):not(.inProgress) {
-      background-color: #42a5f5;
-    }
-
-    #mainLink {
-      margin-top: 20px;
-      padding: 15px;
-    }
-
     #continueBtn {
-      background-color: #00796b;
+      background-color: #ccc;
       color: white;
-      border: none;
       padding: 12px 25px;
       font-size: 18px;
+      border: none;
       border-radius: 8px;
-      cursor: pointer;
-      animation: pulse 1.2s infinite;
-    }
-
-    #continueBtn:disabled {
-      background-color: #ccc;
+      margin: 20px 0 10px;
       cursor: not-allowed;
-      animation: none;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    #continueBtn.active {
+      background-color: #0088cc; /* Telegram blue */
+      cursor: pointer;
+    }
+
+    .ad-label {
+      font-weight: bold;
+      color: #444;
+      margin: 10px 0 5px;
     }
 
     .native-ad {
-      width: 100%;
-      margin-top: 30px;
-      background: #e0f2f1;
-      padding: 10px;
-      box-sizing: border-box;
-      overflow: hidden;
-    }
-
-    iframe {
-      max-width: 100%;
-      box-sizing: border-box;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -130,73 +106,67 @@
   <div class="container">
     <div class="top-banner">Premium Paid Channel</div>
 
-    <div class="logo" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg'); background-color: white; background-size: cover; background-position: center;"></div>
+    <button class="subscribe-btn" onclick="window.location.href='https://example.com/subscribe'">সাবস্ক্রিপশন কিনুন</button>
 
-    <div class="bio" style="color: gray;">
-      <h2 style="animation: pulse 1.5s infinite; color: #1976d2;">প্রিমিয়াম পেইড চ্যানেল 🔒</h2>
-      [ টাস্ক ৩ টি কমপ্লিট করু<script type='text/javascript' src='//pl26622385.profitableratecpm.com/bb/ef/be/bbefbecb892d45aa25c96f146bdce75b.js'></script>ন এবং ফ্রিতে পেইড চ্যানেলে জয়েন করুন ]
-      <div class="warning-text" style="color: green;">
-        প্রতিটি লিংকে ক্লিক করার পর অন্তত ১০ সেকেন্ড অপেক্ষা করুন।<br>
-        ১০ সেকেন্ডের আগে ফিরে এলে টাস্ক সম্পন্ন হবে না।
-      </div>
+    <div class="logo"></div>
+
+    <div class="notice">
+      ৮টি টাস্ক সম্পন্ন করুন → প্রতিটি টাস্কে ক্লিক করার পর ৫ সেকেন্ড অপেক্ষা করুন → আগে ফিরে এলে টাস্ক হবে না → সব হলে "Join Now" ক্লিক করুন।
     </div>
 
-    <button class="task incomplete" id="task1" onclick="startTask(1)">1st Task</button>
-    <button class="task incomplete" id="task2" onclick="startTask(2)">2nd Task</button>
-    <button class="task incomplete" id="task3" onclick="startTask(3)">3rd Task</button>
+    <button class="task" onclick="startTask(this, 1)">1 Task</button>
+    <button class="task" onclick="startTask(this, 2)">2 Task</button>
+    <button class="task" onclick="startTask(this, 3)">3 Task</button>
+    <button class="task" onclick="startTask(this, 4)">4 Task</button>
 
-    <div id="mainLink">
-      <button id="continueBtn" disabled onclick="window.location.href='https://t.me/premiumPaidChennel'" >Join Now</button>
+    <button id="continueBtn" disabled onclick="window.location.href='https://t.me/premiumPaidChennel'">Join Now</button>
+
+    <div class="ad-label">বিজ্ঞাপন</div>
+    <div class="native-ad">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '7132ac6dbb3cdc71db98dda1eb48c773',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/7132ac6dbb3cdc71db98dda1eb48c773/invoke.js"></script>
     </div>
-
-    <h3>বিজ্ঞাপন</h3>
-
-    <script type="text/javascript">
-      atOptions = {
-        'key' : '7132ac6dbb3cdc71db98dda1eb48c773',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/7132ac6dbb3cdc71db98dda1eb48c773/invoke.js"></script>
-
-    <div class="native-ad"></div>
   </div>
 
   <script>
     let completedTasks = 0;
-    let taskClicked = {};
 
-    const taskLinks = {
-      1: 'https://www.profitableratecpm.com/tbg5zwm2?key=a0264353a638a994034527ac93c5117e',
-      2: 'https://otieu.com/4/9388402',
-      3: 'https://www.profitableratecpm.com/pyhfbbhs85?key=71e8d274c35205987da57964c0a84abd'
-    };
+    function startTask(button, taskId) {
+      if (button.classList.contains('complete')) return;
 
-    function startTask(taskNumber) {
-      if (taskClicked[taskNumber]) return;
-      taskClicked[taskNumber] = true;
+      button.textContent = "In Progress...";
+      const startTime = Date.now();
+      const popup = window.open("https://example.com/task" + taskId, "_blank");
 
-      const button = document.getElementById('task' + taskNumber);
-      button.classList.remove('incomplete');
-      button.classList.add('inProgress');
-      button.innerText = 'In Progress...';
+      const interval = setInterval(() => {
+        if (popup.closed) {
+          clearInterval(interval);
+          const duration = (Date.now() - startTime) / 1000;
 
-      const win = window.open(taskLinks[taskNumber], '_blank');
+          if (duration >= 5) {
+            button.textContent = "Complete";
+            button.classList.add("complete");
+            completedTasks++;
 
-      setTimeout(() => {
-        completedTasks++;
-        button.innerText = 'Complete';
-        button.classList.remove('inProgress');
-        button.classList.add('complete');
-
-        alert('টাস্ক ' + taskNumber + ' সফলভাবে সম্পন্ন হয়েছে!');
-        if (completedTasks >= 3) {
-          document.getElementById('continueBtn').disabled = false;
+            if (completedTasks >= 4) {
+              const continueBtn = document.getElementById("continueBtn");
+              continueBtn.disabled = false;
+              continueBtn.classList.add("active");
+            }
+          } else {
+            alert("আপনি ৫ সেকেন্ডের আগে ফিরে এসেছেন, তাই টাস্ক কমপ্লিট হয়নি।\nদয়া করে আবার ক্লিক করে ৫ সেকেন্ড অপেক্ষা করুন এবং টাস্ক সম্পন্ন করুন।");
+            button.textContent = "Incomplete";
+          }
         }
-      }, 9000);
+      }, 500);
     }
   </script>
 </body>

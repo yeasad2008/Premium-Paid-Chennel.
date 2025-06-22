@@ -1,230 +1,88 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Premium Paid Channel</title>
+  <meta charset="UTF-8">
+  <title>Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: sans-serif;
       background: #f2f2f2;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    .container {
-      max-width: 480px;
-      margin: auto;
-      padding: 10px;
-    }
-    .top-banner {
-      background-color: #000;
-      color: #fff;
-      font-size: 18px;
-      padding: 12px;
-      font-weight: bold;
-    }
-    .subscribe-btn {
-      background-color: red;
-      color: white;
-      padding: 6px 14px;
-      font-size: 14px;
-      border: none;
-      border-radius: 6px;
-      margin-top: 12px;
-      cursor: pointer;
-    }
-    .logo {
-      width: 100px;
-      height: 100px;
-      margin: 10px auto;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg') no-repeat center/cover;
-      border-radius: 50%;
-      border: 3px solid #00695c;
-    }
-    .notice {
-      background: #e0f7fa;
-      color: #006064;
-      border: 1px solid #004d40;
-      border-radius: 8px;
-      padding: 8px;
-      margin: 10px 15px;
-      font-size: 14px;
-      line-height: 1.5em;
-    }
-    .task {
-      background-color: #64b5f6;
-      color: white;
-      padding: 15px 20px;
-      margin: 10px auto;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      width: 80%;
-      max-width: 300px;
-      cursor: pointer;
-    }
-    .task.complete {
-      background-color: #4CAF50;
-    }
-    #continueBtn {
-      background-color: #ccc;
-      color: white;
-      padding: 12px 25px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      margin: 20px 0 10px;
-      cursor: not-allowed;
-    }
-    #continueBtn.active {
-      background-color: #0088cc;
-      cursor: pointer;
-    }
-    .ad-label {
-      font-weight: bold;
-      color: #444;
-      margin: 10px 0 5px;
-    }
-    .native-ad {
-      margin-bottom: 20px;
-    }
-    .popup-overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      display: none;
-      justify-content: center;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      z-index: 9999;
-    }
-    .popup-box {
-      background: white;
+      justify-content: space-between;
+      min-height: 100vh;
       padding: 20px;
-      max-width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    .popup-box p {
-      color: #000;
-      font-size: 17px;
       text-align: center;
     }
-    .popup-box p span {
-      color: red;
-      font-weight: bold;
+    h2 {
+      margin: 20px 0;
+      font-size: 24px;
+      color: #333;
     }
-    .popup-box p strong {
-      color: #0066cc;
-    }
-    .popup-btn {
-      margin-top: 15px;
-      background: #0088cc;
-      color: #fff;
-      padding: 10px 20px;
+    .btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      color: white;
       border: none;
-      border-radius: 8px;
-      font-size: 16px;
+      border-radius: 10px;
+      font-size: 20px;
       cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    .ad-container {
+      margin: 20px 0;
+    }
+    @media (max-width: 480px) {
+      .btn {
+        font-size: 18px;
+        padding: 12px 25px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="top-banner">Premium Paid Channel</div>
 
-    <button class="subscribe-btn" onclick="window.location.href='https://t.me/Jonsyash'">সাবস্ক্রিপশন কিনুন</button>
+  <!-- সোশ্যালবার এড -->
+  <script type='text/javascript' src='//pl26622385.profitableratecpm.com/bb/ef/be/bbefbecb892d45aa25c96f146bdce75b.js'></script>
 
-    <div class="logo"></div>
-
-    <div class="notice">
-      ৪টি টাস্ক সম্পন্ন করুন → প্রতি<script type='text/javascript' src='//pl26622385.profitableratecpm.com/bb/ef/be/bbefbecb892d45aa25c96f146bdce75b.js'></script>টি টাস্কে ক্লিক করার পর ৫ সেকেন্ড অপেক্ষা করুন → আগে ফিরে এলে টাস্ক হবে না → সব হলে "Join Now" ক্লিক করুন।
-    </div>
-
-    <button class="task" onclick="startTask(this, 1)">1 Task</button>
-    <button class="task" onclick="startTask(this, 2)">2 Task</button>
-    <button class="task" onclick="startTask(this, 3)">3 Task</button>
-    <button class="task" onclick="startTask(this, 4)">4 Task</button>
-
-    <button id="continueBtn" disabled onclick="window.location.href='https://t.me/premiumPaidChennel'">Join Now</button>
-
-    <div class="ad-label">বিজ্ঞাপন</div>
-    <div class="native-ad">
-      <script type="text/javascript">
-        atOptions = {
-          'key' : '7132ac6dbb3cdc71db98dda1eb48c773',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-      </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/7132ac6dbb3cdc71db98dda1eb48c773/invoke.js"></script>
-    </div>
+  <!-- উপরের ব্যানার এড -->
+  <div class="ad-container">
+    <script type="text/javascript">
+    atOptions = {
+      'key' : '7132ac6dbb3cdc71db98dda1eb48c773',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/7132ac6dbb3cdc71db98dda1eb48c773/invoke.js"></script>
   </div>
 
-  <div class="popup-overlay" id="popup">
-    <div class="popup-box">
-      <p><span>আপনি ৫ সেকেন্ডের আগে ফিরে এসেছেন,</span><br> তাই টাস্ক কমপ্লিট হয়নি।<br><strong>দয়া করে আবার ক্লিক করে ৫ সেকেন্ড অপেক্ষা করুন এবং টাস্ক সম্পন্ন করুন।</strong></p>
-      <button class="popup-btn" onclick="closePopup()">ঠিক আছে</button>
-    </div>
+  <h2>Click here I'm not a robot</h2>
+  <button class="btn" onclick="window.location.href='step2.html'">Click Here</button>
+
+  <!-- নিচের ব্যানার এড -->
+  <div class="ad-container">
+    <script type="text/javascript">
+    atOptions = {
+      'key' : '6dc0410be848c1ce0bc826f79147c6f7',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/6dc0410be848c1ce0bc826f79147c6f7/invoke.js"></script>
   </div>
 
-  <script>
-    let completedTasks = 0;
-    const taskLinks = [
-      "https://www.profitableratecpm.com/fv4tg1kyd?key=53969fd2829b6dc02fe60bdebfa2c6d6",
-      "https://www.profitableratecpm.com/bwyebg8wa?key=f27a49ff98efb51684addd7eef1f20d0",
-      "https://otieu.com/4/9460443",
-      "https://otieu.com/4/9460128"
-    ];
-
-    function startTask(button, taskId) {
-      if (button.classList.contains('complete')) return;
-
-      button.textContent = "In Progress...";
-      const startTime = Date.now();
-      const popup = window.open(taskLinks[taskId - 1], "_blank");
-
-      const interval = setInterval(() => {
-        if (popup.closed) {
-          clearInterval(interval);
-          const duration = (Date.now() - startTime) / 1000;
-
-          if (duration >= 5) {
-            button.textContent = "Complete";
-            button.classList.add("complete");
-            completedTasks++;
-
-            if (completedTasks >= 4) {
-              const continueBtn = document.getElementById("continueBtn");
-              continueBtn.disabled = false;
-              continueBtn.classList.add("active");
-            }
-          } else {
-            button.textContent = "Incomplete";
-            showPopup();
-
-            // ২ সেকেন্ড পর আবার আগের টেক্সটে রিসেট করো যাতে ইউজার আবার ক্লিক করতে পারে
-            setTimeout(() => {
-              button.textContent = taskId + " Task";
-            }, 2000);
-
-            // এখানে সাইট থেকে বের করার কোনো কোড নেই, তাই সাইট থেকে বের হবে না
-          }
-        }
-      }, 500);
-    }
-
-    function showPopup() {
-      document.getElementById("popup").style.display = "flex";
-    }
-
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-  </script>
 </body>
 </html>
